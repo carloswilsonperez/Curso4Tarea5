@@ -8,7 +8,7 @@
     tools:context="com.example.administrador.curso4_tarea5.Activity.FormularioActivity">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/miActionbar"
         layout="@layout/toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -110,6 +110,7 @@
                 android:text="@string/btn_enviar"
                 android:theme="@style/MiBotonRaised" />
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

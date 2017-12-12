@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by administrador on 27/05/17.
  */
 
-public interface IActivity2View {
+public interface IMasVotatosActivityView {
 
     public void generarLinearLayoutVertical();
 

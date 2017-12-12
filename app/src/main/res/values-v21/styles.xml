@@ -1,11 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorPrimary">@color/color_text_primary</item>
+        <!-- Habilitar animaciones en las transiciones -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- Deshabilita la suporposición de transiciones  -->
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -22,6 +29,4 @@
         <item name="colorControlHighlight">@color/color_blanco</item>
         <item name="android:textColor">@color/color_blanco</item>
     </style>
-
-
 </resources>

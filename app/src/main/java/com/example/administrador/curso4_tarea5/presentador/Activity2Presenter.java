@@ -1,7 +1,7 @@
 package com.example.administrador.curso4_tarea5.presentador;
 
 import android.content.Context;
-import com.example.administrador.curso4_tarea5.Activity.IActivity2View;
+import com.example.administrador.curso4_tarea5.Activity.IMasVotatosActivityView;
 import com.example.administrador.curso4_tarea5.bd.ConstructorMascotas;
 import com.example.administrador.curso4_tarea5.pojo.Mascota;
 import java.util.ArrayList;
@@ -12,13 +12,13 @@ import java.util.ArrayList;
 
 public class Activity2Presenter implements IActivity2Presenter {
 
-    private IActivity2View iActivity2View;
+    private IMasVotatosActivityView iMasVotatosActivityView;
     private Context context;
     private ConstructorMascotas constructorMascotas;
     private ArrayList<Mascota> mascotas;
 
-    public Activity2Presenter(IActivity2View iActivity2View, Context context) {
-        this.iActivity2View = iActivity2View;
+    public Activity2Presenter(IMasVotatosActivityView iMasVotatosActivityView, Context context) {
+        this.iMasVotatosActivityView = iMasVotatosActivityView;
         this.context = context;
         obtener5MascotasBaseDatos();
     }
@@ -33,9 +33,9 @@ public class Activity2Presenter implements IActivity2Presenter {
     @Override
     public void mostrarMascotasRV() {
         // Hay que inicializar el adaptador, para ello primero se debe crear el adaptador y pasarele el ArrayList contactos
-        iActivity2View.inicializarAdaptadorRV(iActivity2View.crearAdaptador(mascotas));
+        iMasVotatosActivityView.inicializarAdaptadorRV(iMasVotatosActivityView.crearAdaptador(mascotas));
         // Luego se debe indicar que genere el LinearLayoutVertical
-        iActivity2View.generarLinearLayoutVertical();
+        iMasVotatosActivityView.generarLinearLayoutVertical();
     }
 
 

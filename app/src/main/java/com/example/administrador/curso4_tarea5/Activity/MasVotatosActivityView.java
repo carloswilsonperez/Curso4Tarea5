@@ -1,10 +1,14 @@
 package com.example.administrador.curso4_tarea5.Activity;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -16,7 +20,7 @@ import com.example.administrador.curso4_tarea5.presentador.IActivity2Presenter;
 
 import java.util.ArrayList;
 
-public class Activity2 extends AppCompatActivity implements IActivity2View {
+public class MasVotatosActivityView extends AppCompatActivity implements IMasVotatosActivityView {
 
     ArrayList<Mascota> mascotas;
     private RecyclerView rvMascotas;
@@ -26,13 +30,25 @@ public class Activity2 extends AppCompatActivity implements IActivity2View {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            //***** Transició de entrada de abajo hacia arriba****
+            Transition enterSlide = new Slide(Gravity.LEFT);
+            enterSlide.setDuration(500);
+            getWindow().setEnterTransition(enterSlide);
+            // **** Transición de salida de abajo hacia arriba *********
+            getWindow().setExitTransition(enterSlide);
+            //**** Transición de retorno *******
+            getWindow().setReturnTransition(enterSlide);
+            //*****  Transición de reentrada  *****
+            getWindow().setReenterTransition(enterSlide);
+        }
+
+        setContentView(R.layout.activity_mas_votados);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.miToolBar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         rvMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
         presentador = new Activity2Presenter(this, getApplicationContext());

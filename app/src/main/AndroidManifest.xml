@@ -20,19 +20,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.administrador.curso4_tarea5.Activity.Activity2"
+            android:name="com.example.administrador.curso4_tarea5.Activity.MasVotatosActivityView"
             android:parentActivityName="com.example.administrador.curso4_tarea5.Activity.MainActivity">
-
             <!-- Soporte para versiones 4.0 o menores -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.administrador.curso4_tarea5.Activity.MainActivity" />
         </activity>
-        <activity android:name="com.example.administrador.curso4_tarea5.Activity.FormularioActivity" />
+        <activity
+            android:name="com.example.administrador.curso4_tarea5.Activity.FormularioActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden">
+            <!-- Soporte para versiones 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.administrador.curso4_tarea5.Activity.MainActivity" />
+        </activity>
         <activity
             android:name="com.example.administrador.curso4_tarea5.Activity.AcercadeActivity"
             android:label="@string/title_activity_acercade"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <!-- Soporte para versiones 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.administrador.curso4_tarea5.Activity.MainActivity" />
+
+        </activity>
     </application>
 
 </manifest>

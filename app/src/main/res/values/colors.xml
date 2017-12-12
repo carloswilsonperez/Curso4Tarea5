@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#75E2E9</color>
-    <color name="colorPrimaryDark">#3cb0b7</color>
-    <color name="colorAccent">#EF5344</color>
-    <color name="colorBlanco">#ffffff</color>
-    <color name="navigationBarColor">#4c3d41</color>
+    <color name="color_primary">#75E2E9</color>
+    <color name="color_primary_dark">#3cb0b7</color>
+    <color name="color_accent">#EF5344</color>
+    <color name="color_blanco">#ffffff</color>
+    <color name="color_text_primary">#FF000000</color>
+    <color name="navigation_bar_color">#4c3d41</color>
     <color name="fondo_perro00">#7FB348</color>
     <color name="fondo_perro01">#0F7BC4</color>
     <color name="fondo_perro02">#FE6FA4</color>
